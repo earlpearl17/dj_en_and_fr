@@ -1,2 +1,11 @@
-<h1>Have a great day!</h1>
-<a href="{% url 'duolang:home' %}">Home</a>
+{% extends 'base.html'%}
+{% load i18n %}
+
+{% block content %}
+
+<h1>{% trans "Have a great day!" %}</h1>
+<a href="{% url 'duolang:home' %}">{% trans "Home" %}</a>
+<form>
+<button type="button" class="btn btn-tw"><i class="fab fa-twitter pr-1"></i>{% trans "Login with Twitter" %}</button>
+</form>
+{% endblock %}

@@ -1,2 +1,11 @@
-<h1>Welcome to the home page.</h1>
-<a href="{% url 'duolang:greeting' %}">Greetings</a>
+{% extends 'base.html'%}
+{% load i18n %}
+
+{% block content %}
+
+    <h1>{% trans "Welcome to the home page." %}</h1>
+    <a href="{% url 'duolang:greeting' %}">{% trans "Greetings" %}</a>
+    <form>
+        <button class="button-facebook">{% trans "Login with Facebook" %}</button>
+    </form>
+{% endblock %}
